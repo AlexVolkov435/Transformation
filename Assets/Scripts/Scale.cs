@@ -2,7 +2,8 @@ using UnityEngine;
     
 public class Scale : MonoBehaviour
 {
-    [SerializeField] private ObjectChange _objectChange;
+    [SerializeField] private ObjectChanger _objectStatusHandler;
+
     [SerializeField] private float _speedScaleX;
     [SerializeField] private float _speedScaleY;
     [SerializeField] private float _speedScaleZ;
@@ -21,6 +22,6 @@ public class Scale : MonoBehaviour
 
     public void Growth()
     {
-        transform.localScale = _objectChange.Growth(_speedScaleX, _speedScaleY, _speedScaleZ);
+        transform.localScale = _objectStatusHandler.Growth(_speedScaleX, _speedScaleY, _speedScaleZ);
     }
 }
