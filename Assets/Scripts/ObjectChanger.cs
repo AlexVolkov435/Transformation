@@ -7,9 +7,9 @@ public class ObjectChanger: MonoBehaviour
 
     public Object NameFaceMovement => _objectFaceMovement;
 
-    public Vector3 Growth(float _speedScaleX, float _speedScaleY, float _speedScaleZ)
+    public Vector3 Growth(Vector3 vector3)
     {
-        return transform.localScale += new Vector3(_speedScaleX, _speedScaleY, _speedScaleZ);
+        return transform.localScale += vector3;
     }
 
     public Quaternion Rotate(float _speedRotation)
