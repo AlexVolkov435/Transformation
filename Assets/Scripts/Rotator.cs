@@ -6,16 +6,11 @@ public class Rotator : MonoBehaviour
 
     private void Start()
     {
-        _speedRotation = 10;
+        _speedRotation = 100;
     }
 
     private void FixedUpdate()
     {
-        Rotate();
-    }
-
-    public void Rotate()
-    {
-        transform.Rotate(new Vector3(0, _speedRotation, 0));
+        transform.rotation *= Quaternion.Euler(0, _speedRotation * Time.fixedDeltaTime, 0);
     }
 }
